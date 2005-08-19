@@ -9,11 +9,11 @@ process TEST = {
 	
 	module HcalDbAnalyzer = HcalDbAnalyzer {}
 	
-#	es_module = HcalDbProducer {untracked string dbSource = "frontier"}
+#Frontier	es_module = HcalDbProducer {untracked string dbSource = "frontier"}
 	es_module = HcalDbProducer {untracked string dbSource = "hardcode"}
 	
 	es_source = HcalDbSourceHardcode {}
-	es_source = HcalDbSourceFrontier {}
+#Frontier	es_source = HcalDbSourceFrontier {}
 
 	source = EmptyInputService {untracked int32 maxEvents = 5}
 
@@ -21,7 +21,7 @@ process TEST = {
 	       {string record = "HcalDbRecord" 
                 vstring data = { 
                                 "HcalDbServiceHardcode",
-                                "HcalDbServiceFrontier",
+#Frontier                                "HcalDbServiceFrontier",
                                 "HcalDbServiceHandle"} } } 
 	       untracked bool verbose = true 
 	}
