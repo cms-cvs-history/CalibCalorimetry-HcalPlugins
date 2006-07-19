@@ -2,4 +2,4 @@
 
 	es_module hcal_db_producer = HcalDbProducer {}
 
-        es_source hcal_es_hardcode = HcalHardcodeCalibrations {untracked vstring toGet = {"Pedestals", "PedestalWidths", "Gains", "GainWidths", "QIEShape", "QIEData", "channelQuality", "ElectronicsMap"}}
+        es_source hcal_es_hardcode = HcalHardcodeCalibrations {untracked vstring toGet = {"Pedestals", "PedestalWidths", "Gains", "GainWidths", "QIEShape", "QIEData", "ChannelQuality", "ElectronicsMap"}}
