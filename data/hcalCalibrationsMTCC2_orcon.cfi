@@ -1,3 +1,7 @@
+# for this to work need the following:
+# setenv POOL_CATALOG relationalcatalog_oracle://orcon/CMS_COND_GENERAL
+# setenv CORAL_AUTH_PATH /afs/cern.ch/cms/DB/conddb
+
 es_module hcal_db_producer = HcalDbProducer {}
 es_source es_pool = PoolDBESSource { VPSet toGet = {
                     {string record = "HcalPedestalsRcd"
@@ -22,8 +26,8 @@ es_source es_pool = PoolDBESSource { VPSet toGet = {
                   }
                   string connect = "oracle://orcon/CMS_COND_HCAL"
                   string timetype = "runnumber"
-                  untracked bool siteLocalConfig = true
+#                  untracked bool siteLocalConfig = true
                   untracked uint32 authenticationMethod = 1
-#                  untracked uint32 messagelevel = 0
+#                  untracked uint32 messagelevel = 3
              }
 es_source es_hardcode = HcalHardcodeCalibrations {untracked vstring toGet = {"channelQuality"}}
