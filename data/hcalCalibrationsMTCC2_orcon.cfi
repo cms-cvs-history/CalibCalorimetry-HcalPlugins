@@ -14,7 +14,7 @@ es_source es_pool = PoolDBESSource { VPSet toGet = {
                      string tag =    "hcal_qie_hardcoded_v1"
                     },
                     {string record = "HcalElectronicsMapRcd"
-                     string tag =    "emap_mtcc2_v1"
+                     string tag =    "emap_mtcc2_v3"
                     },
 # not used in reconstruction
                     {string record = "HcalPedestalWidthsRcd"
