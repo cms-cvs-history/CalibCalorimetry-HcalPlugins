@@ -1,8 +1,16 @@
 # HCAL setup suitable for MC simulation and production (no ElectronicsMapping)
 
-	es_module hcal_db_producer = HcalDbProducer {}
+	es_module hcal_db_producer = HcalDbProducer {
+          untracked double hbEScale=1.0
+          untracked double hesEScale=1.0
+          untracked double hedEScale=1.0
+          untracked double hoEScale=1.0
+          untracked double hf1EScale=1.0
+          untracked double hf2EScale=1.0
+        }
 
-	es_source es_ascii = HcalTextCalibrations { VPSet input = {
+	es_source es_ascii = HcalTextCalibrations { 
+          VPSet input = {
                                               {string object = "Pedestals"
                                                FileInPath file = "CondFormats/HcalObjects/data/pedestals_hardcoded.txt"
                                               }
@@ -24,7 +32,7 @@
                                              ,{string object = "ChannelQuality"
                                                FileInPath file = "CondFormats/HcalObjects/data/quality_hardcoded.txt"
                                               }
-                                           }
-                                        }
+          }
+        }
 
 

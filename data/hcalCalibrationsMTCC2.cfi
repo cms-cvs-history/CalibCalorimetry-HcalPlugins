@@ -1,6 +1,12 @@
 es_module hcal_db_producer = HcalDbProducer {
          untracked vstring dump = {""}
          untracked string file = ""
+         untracked double hbEScale=1.0
+         untracked double hesEScale=1.0
+         untracked double hedEScale=1.0
+         untracked double hoEScale=1.0
+         untracked double hf1EScale=1.0
+         untracked double hf2EScale=1.0
 }
 
 

@@ -1,5 +1,14 @@
 # HCAL setup suitable for MC simulation and production (no ElectronicsMapping)
 
-	es_module hcal_db_producer = HcalDbProducer {}
+	es_module hcal_db_producer = HcalDbProducer {
+          untracked double hbEScale=1.0
+          untracked double hesEScale=1.0
+          untracked double hedEScale=1.0
+          untracked double hoEScale=1.0
+          untracked double hf1EScale=1.0
+          untracked double hf2EScale=1.0
+        }
 
-        es_source hcal_es_hardcode = HcalHardcodeCalibrations {untracked vstring toGet = {"Pedestals", "PedestalWidths", "Gains", "GainWidths", "QIEShape", "QIEData", "ChannelQuality", "ElectronicsMap"}}
+        es_source hcal_es_hardcode = HcalHardcodeCalibrations {
+          untracked vstring toGet = {"Pedestals", "PedestalWidths", "Gains", "GainWidths", "QIEShape", "QIEData", "ChannelQuality", "ElectronicsMap"}
+        }
