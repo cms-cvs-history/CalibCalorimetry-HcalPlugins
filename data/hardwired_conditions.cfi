@@ -1,12 +1,12 @@
 # HCAL setup suitable for MC simulation and production (no ElectronicsMapping)
 
 	es_module hcal_db_producer = HcalDbProducer {
-          untracked double hbEScale=1.0
-          untracked double hesEScale=1.0
-          untracked double hedEScale=1.0
-          untracked double hoEScale=1.0
-          untracked double hf1EScale=1.0
-          untracked double hf2EScale=1.0
+          double hbEScale=1.0
+          double hesEScale=1.0
+          double hedEScale=1.0
+          double hoEScale=1.0
+          double hf1EScale=1.0
+          double hf2EScale=1.0
         }
 
         es_source hcal_es_hardcode = HcalHardcodeCalibrations {

@@ -3,12 +3,12 @@
 # setenv CORAL_AUTH_PATH /afs/cern.ch/cms/DB/conddb
 
 es_module hcal_db_producer = HcalDbProducer {
-          untracked double hbEScale=1.0
-          untracked double hesEScale=1.0
-          untracked double hedEScale=1.0
-          untracked double hoEScale=1.0
-          untracked double hf1EScale=1.0
-          untracked double hf2EScale=1.0
+          double hbEScale=1.0
+          double hesEScale=1.0
+          double hedEScale=1.0
+          double hoEScale=1.0
+          double hf1EScale=1.0
+          double hf2EScale=1.0
 }
 es_source es_pool = PoolDBESSource { VPSet toGet = {
                     {string record = "HcalPedestalsRcd"
