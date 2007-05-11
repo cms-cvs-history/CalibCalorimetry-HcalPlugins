@@ -1,6 +1,6 @@
 // -*- C++ -*-
 // Original Author:  Fedor Ratnikov
-// $Id: HcalHardcodeCalibrations.cc,v 1.8 2006/05/24 19:07:39 fedor Exp $
+// $Id: HcalHardcodeCalibrations.cc,v 1.8.2.1 2007/05/08 21:12:09 mansj Exp $
 //
 //
 
@@ -44,7 +44,7 @@ namespace {
 std::vector<HcalDetId> allCells (bool h2_mode) {
   static std::vector<HcalDetId> result;
   if (result.size () <= 0) {
-    HcalTopology topology;
+    HcalTopology topology(h2_mode);
     for (int eta = -50; eta < 50; eta++) {
       for (int phi = 0; phi < 100; phi++) {
 	for (int depth = 1; depth < 5; depth++) {
