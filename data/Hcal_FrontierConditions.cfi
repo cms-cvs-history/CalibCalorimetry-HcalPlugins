@@ -1,3 +1,11 @@
+
+include "CondCore/DBCommon/data/CondDBCommon.cfi"
+replace CondDBCommon.connect = "oracle://cms_orcoff_int2r/CMS_COND_HCAL"
+replace CondDBCommon.catalog = "relationalcatalog_oracle://cms_orcoff_int2r/CMS_COND_GENERAL"
+replace CondDBCommon.DBParameters.authenticationPath="/afs/cern.ch/cms/DB/conddb"
+replace CondDBCommon.timetype = "runnumber"
+#replace CondDBCommon.DBParameters.messageLevel = 3   #include "CondCore/DBCommon/data/CondDBSetup.cfi"
+
 es_module hcal_db_producer = HcalDbProducer {
          untracked vstring dump = {""}
          untracked string file = ""
@@ -26,9 +34,9 @@ es_source es_pool = PoolDBESSource { VPSet toGet = {
                      string tag =    "hcal_widths_fC_v1"
                     }
                   }
-                  string connect = "frontier://cms_conditions_data/CMS_COND_HCAL"
-                  string timetype = "runnumber"
-                  untracked bool siteLocalConfig = true
+#                  string connect = "frontier://cms_conditions_data/CMS_COND_HCAL"
+#                  string timetype = "runnumber"
+                  untracked bool siteLocalConfig = false
 #                  untracked uint32 authenticationMethod = 1
 #                  untracked uint32 messagelevel = 0
              }
