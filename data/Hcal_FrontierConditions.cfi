@@ -17,7 +17,9 @@ es_module hcal_db_producer = HcalDbProducer {
          double hf2EScale=1.0
 }
 
-es_source es_pool = PoolDBESSource { VPSet toGet = {
+es_source es_pool = PoolDBESSource { 
+      using CondDBSetup
+            VPSet toGet = {
                     {string record = "HcalPedestalsRcd"
                      string tag    = "hcal_pedestals_fC_v1"
                     },
