@@ -2,14 +2,8 @@
 # setenv POOL_CATALOG relationalcatalog_oracle://orcon/CMS_COND_GENERAL
 # setenv CORAL_AUTH_PATH /afs/cern.ch/cms/DB/conddb
 
-es_module hcal_db_producer = HcalDbProducer {
-          double hbEScale=1.0
-          double hesEScale=1.0
-          double hedEScale=1.0
-          double hoEScale=1.0
-          double hf1EScale=1.0
-          double hf2EScale=1.0
-}
+es_module hcal_db_producer = HcalDbProducer { }
+
 es_source es_pool = PoolDBESSource { VPSet toGet = {
                     {string record = "HcalPedestalsRcd"
                      string tag    = "pedestals_mtcc2_v1"
