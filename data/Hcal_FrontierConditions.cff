@@ -29,12 +29,12 @@ es_source es_pool = PoolDBESSource {
                     {string record = "HcalQIEDataRcd"
                      string tag =    "qie_normalmode_v3"
                     },
-#                    {string record = "HcalElectronicsMapRcd"
-#                     string tag =    "official_emap_14x_v2"
-#                    },
+                    {string record = "HcalElectronicsMapRcd"
+                     string tag =    "emapTest15"
+                    },
                     {string record = "HcalPedestalWidthsRcd"
                      string tag =    "hcal_widths_fC_v1"
                     }
                   }
              }
-es_source es_hardcode = HcalHardcodeCalibrations {untracked vstring toGet = {"GainWidths", "channelQuality", "ElectronicsMap"}}
+es_source es_hardcode = HcalHardcodeCalibrations {untracked vstring toGet = {"GainWidths", "channelQuality"}}
