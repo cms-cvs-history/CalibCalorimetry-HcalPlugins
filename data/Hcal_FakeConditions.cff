@@ -22,8 +22,12 @@
                                                FileInPath file = "CondFormats/HcalObjects/data/qie_normalmode_v3.txt"
                                               }
                                              ,{string object = "ElectronicsMap"
-                                               FileInPath file = "CondFormats/HcalObjects/data/official_emap_15x_v2.txt"
+                                               FileInPath file = "CondFormats/HcalObjects/data/official_emap_16x_v1.txt"
                                               }
+# this is for 15x series
+#                                             ,{string object = "ElectronicsMap"
+#                                               FileInPath file = "CondFormats/HcalObjects/data/official_emap_15x_v2.txt"
+#                                              }
                                              ,{string object = "ChannelQuality"
                                                FileInPath file = "CondFormats/HcalObjects/data/hcal_quality_v1.txt"
                                               }

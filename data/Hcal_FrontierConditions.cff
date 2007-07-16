@@ -30,8 +30,12 @@ es_source es_pool = PoolDBESSource {
                      string tag =    "qie_normalmode_v3"
                     },
                     {string record = "HcalElectronicsMapRcd"
-                     string tag =    "emapTest15"
+                     string tag =    "official_emap_16x_v1"
                     },
+# this was for 15x series
+#                    {string record = "HcalElectronicsMapRcd"
+#                     string tag =    "emapTest15"
+#                    },
                     {string record = "HcalPedestalWidthsRcd"
                      string tag =    "hcal_widths_fC_v1"
                     }
