@@ -22,7 +22,6 @@ es_source es_pool = PoolDBESSource { VPSet toGet = {
                   }
                   string connect = "frontier://cms_conditions_data/CMS_COND_HCAL"
                   string timetype = "runnumber"
-                  untracked bool siteLocalConfig = true
 #                  untracked uint32 authenticationMethod = 1
 #                  untracked uint32 messagelevel = 0
              }

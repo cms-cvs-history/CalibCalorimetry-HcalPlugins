@@ -1,7 +1,6 @@
 
 #include "CondCore/DBCommon/data/CondDBCommon.cfi"
 #replace CondDBCommon.connect = "oracle://cms_orcoff_int2r/CMS_COND_HCAL"
-#replace CondDBCommon.catalog = "relationalcatalog_oracle://cms_orcoff_int2r/CMS_COND_GENERAL"
 #replace CondDBCommon.DBParameters.authenticationPath="/afs/cern.ch/cms/DB/conddb"
 #replace CondDBCommon.timetype = "runnumber"
 
@@ -15,7 +14,6 @@ es_module hcal_db_producer = HcalDbProducer {
 es_source es_pool = PoolDBESSource { 
       using CondDBSetup
       string connect = "frontier://FrontierDev/CMS_COND_HCAL"
-      untracked bool siteLocalConfig = true
       string timetype = "runnumber"    
       untracked uint32 authenticationMethod = 0
            VPSet toGet = {
