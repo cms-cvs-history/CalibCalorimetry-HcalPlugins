@@ -18,33 +18,20 @@ es_source es_pool = PoolDBESSource {
       untracked uint32 authenticationMethod = 0
            VPSet toGet = {
                     {string record = "HcalPedestalsRcd"
-                     string tag    = "hcal_pedestals_fC_v1_zdc"
+                     string tag    = "hcal_pedestals_fC_v1"
                     },
                     {string record = "HcalPedestalWidthsRcd"
-                     string tag =    "hcal_widths_fC_v1_zdc"
+                     string tag =    "hcal_widths_fC_v1"
                     },
                     {string record = "HcalGainsRcd"
-                     string tag =    "hcal_gains_v1_zdc"
+                     string tag =    "hcal_gains_v1"
                     },
                     {string record = "HcalQIEDataRcd"
-                     string tag =    "qie_normalmode_v3_zdc"
+                     string tag =    "qie_normalmode_v3"
                     },
                     {string record = "HcalElectronicsMapRcd"
-                     string tag =    "official_emap_16x_v1"
+                     string tag =    "official_emap_16x_v2"
                     }
-# this is w/o zdc:
-#                    {string record = "HcalPedestalsRcd"
-#                     string tag    = "hcal_pedestals_fC_v1"
-#                    },
-#                    {string record = "HcalPedestalWidthsRcd"
-#                     string tag =    "hcal_widths_fC_v1"
-#                    },
-#                    {string record = "HcalGainsRcd"
-#                     string tag =    "hcal_gains_v1"
-#                    },
-#                    {string record = "HcalQIEDataRcd"
-#                     string tag =    "qie_normalmode_v3"
-#                    },
 # this was for 15x series
 #                    {string record = "HcalElectronicsMapRcd"
 #                     string tag =    "emapTest15"
