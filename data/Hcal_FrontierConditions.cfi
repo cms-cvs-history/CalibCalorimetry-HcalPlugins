@@ -12,26 +12,27 @@ es_module hcal_db_producer = HcalDbProducer {
 
 es_source es_pool = PoolDBESSource { 
       using CondDBSetup
-            VPSet toGet = {
+      string connect = "frontier://FrontierDev/CMS_COND_HCAL"
+      string timetype = "runnumber"    
+      untracked uint32 authenticationMethod = 0
+           VPSet toGet = {
                     {string record = "HcalPedestalsRcd"
-                     string tag    = "hcal_pedestals_fC_v1"
-                    },
-                    {string record = "HcalGainsRcd"
-                     string tag =    "hcal_gains_v1"
-                    },
-                    {string record = "HcalQIEDataRcd"
-                     string tag =    "qie_normalmode_v3"
-                    },
-                    {string record = "HcalElectronicsMapRcd"
-                     string tag =    "official_emap_14x_v2"
+                     string tag    = "hcal_pedestals_fC_v3"
                     },
                     {string record = "HcalPedestalWidthsRcd"
-                     string tag =    "hcal_widths_fC_v1"
+                     string tag =    "hcal_widths_fC_v3"
+                    },
+                    {string record = "HcalGainsRcd"
+                     string tag =    "hcal_gains_v2_physics_50"
+                    },
+                    {string record = "HcalQIEDataRcd"
+                     string tag =    "qie_normalmode_v5"
+                    },
+                    {string record = "HcalElectronicsMapRcd"
+                     string tag =    "official_emap_v5_080208"
                     }
                   }
-#                  string connect = "frontier://cms_conditions_data/CMS_COND_HCAL"
-#                  string timetype = "runnumber"
-#                  untracked uint32 authenticationMethod = 1
-#                  untracked uint32 messagelevel = 0
              }
-es_source es_hardcode = HcalHardcodeCalibrations {untracked vstring toGet = {"GainWidths", "channelQuality"}}
+es_source es_hardcode = HcalHardcodeCalibrations {untracked vstring toGet = 
+	  {"GainWidths", "channelQuality", "ZSThresholds", "RespCorrs"}}
+
