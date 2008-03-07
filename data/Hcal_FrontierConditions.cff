@@ -35,4 +35,4 @@ es_source es_pool = PoolDBESSource {
                   }
              }
 es_source es_hardcode = HcalHardcodeCalibrations {untracked vstring toGet = 
-	  {"GainWidths", "channelQuality", "ZSThresholds", "RespCorrs"}}
+	  {"GainWidths", "ChannelQuality", "ZSThresholds", "RespCorrs"}}
