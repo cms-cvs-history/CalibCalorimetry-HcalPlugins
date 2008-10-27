@@ -13,10 +13,10 @@ hcal_db_producer = cms.ESProducer("HcalDbProducer",
 es_pool = cms.ESSource("PoolDBESSource",
     CondDBSetup,
     timetype = cms.string('runnumber'),
-    toGet = cms.VPSet(cms.PSet(
+    toGet = cms.VPSet(
         record = cms.string('HcalPedestalsRcd'),
         tag = cms.string('hcal_pedestals_fC_v5_mc')
-    ), 
+        ), 
         cms.PSet(
             record = cms.string('HcalPedestalWidthsRcd'),
             tag = cms.string('hcal_widths_fC_v5_mc')
@@ -32,7 +32,7 @@ es_pool = cms.ESSource("PoolDBESSource",
         cms.PSet(
             record = cms.string('HcalElectronicsMapRcd'),
             tag = cms.string('official_emap_v5_080208_mc')
-        )),
+        ),
     connect = cms.string('frontier://FrontierDev/CMS_COND_HCAL'), ##FrontierDev/CMS_COND_HCAL"
 
     authenticationMethod = cms.untracked.uint32(0)

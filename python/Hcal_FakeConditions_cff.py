@@ -7,7 +7,7 @@ hcal_db_producer = cms.ESProducer("HcalDbProducer",
 )
 
 es_ascii = cms.ESSource("HcalTextCalibrations",
-    input = cms.VPSet(cms.PSet(
+    input = cms.VPSet(
         object = cms.string('Pedestals'),
         file = cms.FileInPath('CondFormats/HcalObjects/data/hcal_pedestals_fC_v5.txt')
     ), 
@@ -42,7 +42,7 @@ es_ascii = cms.ESSource("HcalTextCalibrations",
         cms.PSet(
             object = cms.string('ZSThresholds'),
             file = cms.FileInPath('CondFormats/HcalObjects/data/hcal_ZSthresholds_default.txt')
-        ))
+        )
 )
 
 
