@@ -13,7 +13,7 @@
 //
 // Original Author:  Fedor Ratnikov
 //         Created:  Tue Aug  9 19:10:10 CDT 2005
-// $Id: HcalDbProducer.cc,v 1.25 2009/05/19 16:05:59 rofierzy Exp $
+// $Id: HcalDbProducer.cc,v 1.26 2009/05/20 15:54:18 rofierzy Exp $
 //
 //
 
@@ -47,6 +47,7 @@ HcalDbProducer::HcalDbProducer( const edm::ParameterSet& fConfig)
   //    gives the same result as
   //      dependsOn(&FooProd::func1) & (&FooProd::func2) & (&FooProd::func3)
   // 2) Upon IOV change, all callbacks are called, in the inverse order of their specification below (tested).
+  // 3) Only those callbacks are called for which the conditions have really changed since the previous call
   setWhatProduced (this, (dependsOn (&HcalDbProducer::pedestalsCallback) &
 			  &HcalDbProducer::pedestalWidthsCallback &
 			  &HcalDbProducer::respCorrsCallback &
@@ -89,6 +90,8 @@ HcalDbProducer::~HcalDbProducer()
 // ------------ method called to produce the data  ------------
 boost::shared_ptr<HcalDbService> HcalDbProducer::produce( const HcalDbRecord&)
 {
+  mService->update();
+
   return mService;
 }
 
