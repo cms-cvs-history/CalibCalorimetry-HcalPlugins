@@ -389,6 +389,7 @@ std::auto_ptr<HcalDcsMap> HcalHardcodeCalibrations::produceDcsMap (const HcalDcs
 std::auto_ptr<HcalRecoParams> HcalHardcodeCalibrations::produceRecoParams (const HcalRecoParamsRcd&) {
   edm::LogInfo("HCAL") << "HcalHardcodeCalibrations::produceRecoParams-> ...";
   std::auto_ptr<HcalRecoParams> result (new HcalRecoParams ());
+  if (mode_==HcalTopology::md_SLHC) result->setSlowMode(true);
   std::vector <HcalGenericDetId> cells = allCells(mode_);
   for (std::vector <HcalGenericDetId>::const_iterator cell = cells.begin (); cell != cells.end (); cell++) {
     HcalRecoParam item = HcalDbHardcode::makeRecoParam (*cell);
